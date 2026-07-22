@@ -9,7 +9,7 @@ import gradio as gr
 # ==========================================================
 # --- CODE BLOCK: LOAD XGBOOST MODEL ---
 try:
-    deployed_xgb = joblib.load("car_safety_model.pkl")
+    deployed_xgb = joblib.load("car_evaluation_model.pkl")
     print("Model loaded successfully!")
 except Exception as e:
     print(f"Warning: Model not found or error loading. {e}")
@@ -96,21 +96,7 @@ This application evaluates a vehicle's overall acceptability based on its physic
 Select the vehicle's specifications below to run the assessment.
 """
 
-developer_info = """
-### About the Developer
-**Created by:** Chandan Saroj
 
-* **LinkedIn:** [Connect with me](YOUR_LINKEDIN_URL_HERE)
-* **GitHub:** [Check out my projects](YOUR_GITHUB_URL_HERE)
-* **Instagram:** [Follow me](YOUR_INSTAGRAM_URL_HERE)
-
----
-### 🛠️ Tools & Technologies Used
-* **Machine Learning:** XGBoost Classifier
-* **Web Framework:** Gradio
-* **Language:** Python
-* **Deployment:** Render
-"""
 # --------------------------------------
 
 # ==========================================================
